@@ -1,5 +1,5 @@
 # expand-ec2-disk
-Completes all steps to add space to an existing logical volume on an AWS EC2 Linux instance.  Steps include:
+Completes all steps to add space to an existing logical volume on the current AWS EC2 Linux instance.  Steps include:
 1) Create encrypted volume tagged with Tier
 2) Determine next available block device
 3) Attach volume
@@ -8,6 +8,7 @@ Completes all steps to add space to an existing logical volume on an AWS EC2 Lin
 6) Extend filesystem
 
 # Usage
+Execute on the target instance where the additional storage is required.
 ./expand-ec2-disk.sh [ -s additional space ]
 
 By default, the new volume will be created 20% * the current total size of the logical volume.  A custom size can be provided with the -s flag as an integer in GB.
